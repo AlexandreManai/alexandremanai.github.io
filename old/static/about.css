@@ -1,0 +1,27 @@
+.flex-container {
+    display: flex;
+    align-items: stretch;
+}
+
+.flex-container img {
+    border: 1px solid black;
+    max-width: 450px;
+    margin: 50px 50px 50px 50px;
+    text-align: center; 
+}
+
+.flex-container .text {
+    margin: 50px 50px 50px 50px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+
+.flex-container .text a {
+    text-decoration: underline;
+    color: black;
+}
+
+.middle {
+    margin: 0 20% 0 40%; 
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" href="/static/guess.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <title>Alexandre Manai Portfolio</title>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="logo">
+      <h4><a class="home-logo" href="/">Alexandre Manai</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <script src="/static/app.js"></script>
+
+  <div class="flex-container">
+    <div class="first-block">
+      <div class="img_exp" style="flex-grow: 1">
+        <img src="/static/images/guess.jpg" alt="guess image">
+        <p>Best chromosomes throughout generations</p>
+      </div>
+      <div class="intro" style="flex-grow: 9">
+        <h1>Guess</h1>
+        <p>- <u>Language of implementation:</u>  Python</p>
+        <p>- <u>Algorithms:</u> Genetic Algorithm</p>
+        <br> 
+        <p>Evolution is at the core of life. It defines who we are, as a species, and what we're going to be. Thus it has always been an enormous interest
+           for me to understand how and why it works so well. 
+        </p>
+        <br>
+        <p>
+          This project is an introduction to Genetic Algorithms. I took a very simple environment that consists of a population of 1O individuals.
+          These individual are represented by a chromosome which is an array of genes. A single gene is an integer from 0 to 9.
+        </p>
+        <p>
+            The goal for the algorithm is to find the inputed number of the user without simply printing it out again. 
+        </p>
+      </div>
+    </div>   
+  </div>  
+  <div class="second-block">
+    <p>
+      In Computer Science, a Genetic Algorithm is a metaheuristic inspired by natural selection. It is often used to generate high quality optimization of a task for
+      example walking simulation or even rocket trajectories. It relies on the fundamental ideas of biology, in particular Evolution, such as Crossover, Mutation and
+      Selection.
+    </p>
+    <p>
+      In this project, we'll add another idea called Elitism which takes the best individuals of a population and makes them survive to the next generation. This was
+      done to converge faster towards an optimal solution. 
+    </p>  
+    <p>
+      First of all, we need to implement a fitness function which takes individuals in the population and estimates the best ones. In our case, the best, also called
+      the fittest, are the one's that have the most similar digits with the number to guess.  
+    </p>
+    <p>
+      We'll then need to have a function that takes the individuals of a generation with their according fitness scores and takes the fittest one's to use as parents.
+      These parents will then go through a crossover phase where the genes of two parents will randomly be selected and transferred to the child. 
+    </p>
+    <p>
+      Furthermore, to avoid early convergence we'll randomly mutate an individual in the population.
+    </p>
+    <p>
+      Having all those elements, we can build a Genetic Algorithm. For each generation, we'll point out the fittest one and see how the algorithm works.
+      We can see in the image on the top left of the page how the algorithm works, especially when it finds a new fittest individual.
+    </p>
+    <br>
+    <p>I'm open to any optimizing suggestions and new ideas! Here is my code: <a href="https://gitlab.com/lOkkOl/guessed">Guess</a></p>
+  </div>
+
+</body>
+
+</html>

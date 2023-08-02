@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/static/main.css">
+  <link rel="stylesheet" href="/static/connect4.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <title>Alexandre Manai Portfolio</title>
+</head>
+
+<body>
+  <nav class="main-nav">
+    <div class="logo">
+      <h4><a class="home-logo" href="/">Alexandre Manai</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <script src="/static/app.js"></script>
+
+  <div class="flex-container">
+    <div class="first-block">
+      <div class="video_exp" style="flex-grow: 1">
+        <video width="600" height="430" controls>
+            <source src="/static/videos/connect4.mp4" type="video/mp4">
+        </video>
+        <p>Yellow: AI | Red: Me</p>
+      </div>
+      <div class="intro" style="flex-grow: 9">
+        <h1>Connect4 AI</h1>
+        <p>- <u>Language of implementation:</u>  Python</p>
+        <p>- <u>Algorithms:</u> Minimax, Alpha Beta Pruning</p>
+        <br> 
+        <p>Through games with easy rules, we can model real life problems and find partial solutions with the help of AI. That's why I've looked into games to model and
+           built an AI to play against.    
+        </p>
+        <br>
+        <p>
+          Connect4 is a game that has easy rules and is simply implementable with a 2D array, so I decided to give it a try.
+        </p>
+        <p>
+          Being an introductry Python project for me, it took some time to implement it. By curiosity, I also tried to create a nice visualization through the
+          library pygame. It was a lot of fun, but the interesting part was still ahead: the AI.
+        </p>
+        <p>
+          I then looked for algorithms that would work well as an AI. The first AI I built was a random one (yay), but that wasn't enough.
+          And then I found an algorithm called Minimax, which implements forward thinking. Having played chess for 3 years now, I saw that this is exactly the way 
+          people think during a game, but simply implemented in code. I found that fascinating!
+        </p>
+        <p>
+
+        </p>
+      </div>
+    </div>   
+  </div>  
+  <div class="second-block">
+    <p>Connect4 like Chess for instance is a zero-sum game. A zero-sum game is a mathematical representation of a game where the gain or loss of one participant
+    leads to an exactly balanced loss or gain for the other participant. It is called this way because if both participants add up they gains and deduce their 
+    losses, it would sum up to zero. 
+    </p>  
+    <p>
+      Having that in mind, the Minimax algorithm is perfectly suitable. Firstly, a scoring function for each state of the board was necessary. Online Connect4 players
+      gave me some ideas how to score those states. 
+    </p>
+    <p>
+      The pseudocode on the wikipedia page and the scoring function made it possible to implement it, but I couldn't predict more than 4 moves ahead without overloading 
+      computer.
+    </p>
+    <p>
+      That's why I also implemented Alpha Beta Pruning. This algorithm uses the idea of minimax to prune away parts of the search tree that are not necessary to explore.
+      In short, we add 2 values to the minimax algorithm: alpha and beta. Alpha being used to keep the maxima of a maximizing subtree and beta the minima of a minimizing
+      subtree. Comparing if beta is lower than alpha at each recursive call of the function permits us to prune those subtrees. If this condition holds, the participant 
+      would have had a better option earlier already.
+    </p>
+    <br>
+    <p>I'm open to any optimizing suggestions and new ideas! Here is my code: <a href="https://gitlab.com/lOkkOl/connect4_ai">Connect4AI</a></p>
+  </div>
+
+</body>
+
+</html>

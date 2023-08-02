@@ -1,0 +1,36 @@
+.flex-container {
+    display: flex;
+}
+
+.flex-container .first-block .img_exp {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 0 5%;
+}
+
+.flex-container .first-block .img_exp p {
+    padding-left: 9%
+}
+
+.flex-container .first-block {
+    display: flex;
+    align-items: stretch;
+}
+
+.flex-container .first-block .intro{    
+    margin: 50px 50px 50px 50px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+
+.second-block {
+    padding: 1% 2% 0 5%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+}
+
+.second-block a {
+    text-decoration: underline;
+    color: black;
+}

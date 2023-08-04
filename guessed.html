@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/apple-icon-180x180.png" rel="icon">
+
+  <title>Alexandre Manai</title>  
+
+<link href="./main.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./about.html" title="">02 : About me</a></li>
+          <li><a href="./works.html" title="">03 : Projects</a></li>
+          <li><a href="./resume.html" title="">04 : Resume</a></li>
+          <li><a href="./contact.html" title="">05 : Contact</a></li>
+        </ul>
+
+
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./guessed.html" title="" class="active">001</a></li>
+            <li><a href="./meteo.html" title="">002</a></li>
+            <li><a href="./connect4_AI.html" title="">003</a></li>
+          </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./assets/images/work001-01.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <h1 class="h2">001 : Guessed</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page content-->
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- Post content-->
+                <article>
+                    <!-- Preview image figure-->
+                    <figure class="mb-4  text-center"><img class="img-fluid rounded" src="./assets/images/guess.jpg" alt="..." /></figure>
+                    <p class="text-center">Best chromosomes throughout generations</p>
+                    <!-- Post content-->
+                    <section class="ml-6 text-center">
+                        <p>- <u>Language of implementation:</u>  Python</p>
+                        <p>- <u>Libraries:</u> Numpy, Random</p>
+                        <p>- <u>Algorithms:</u> Genetic Algorithm</p>
+                        <p>- <u>Code:</u> <a href="https://github.com/AlexandreManai/guessed" title="" class="fa-icon" target=”_blank”>
+                          <i class="fa fa-github"></i>
+                        </a></p>
+                    </section>
+                    <p>
+                      The goal for the algorithm is to find the inputed number of the user without simply printing it out again. 
+                    </p>
+                    <p>Evolution is at the core of life. It defines who we are, as a species, and what we're going to be. Thus it has always been an enormous interest
+                      for me to understand how and why it works so well. </p>
+                    <p>
+                      This project is an introduction to Genetic Algorithms. I took a very simple environment that consists of a population of 1O individuals.
+                      These individual are represented by a chromosome which is an array of genes. A single gene is an integer from 0 to 9.
+                    </p>
+                    <p>
+                      In Computer Science, a Genetic Algorithm is a metaheuristic inspired by natural selection. It is often used to generate high quality optimization of a task for
+                      example walking simulation or even rocket trajectories. It relies on the fundamental ideas of biology, in particular Evolution, such as Crossover, Mutation and
+                      Selection.
+                    </p>
+                    <p>
+                      In this project, we'll add another idea called Elitism which takes the best individuals of a population and makes them survive to the next generation. This was
+                      done to converge faster towards an optimal solution. 
+                    </p>  
+                    <p>
+                      First of all, we need to implement a fitness function which takes individuals in the population and estimates the best ones. In our case, the best, also called
+                      the fittest, are the one's that have the most similar digits with the number to guess.  
+                    </p>
+                    <p>
+                      We'll then need to have a function that takes the individuals of a generation with their according fitness scores and takes the fittest one's to use as parents.
+                      These parents will then go through a crossover phase where the genes of two parents will randomly be selected and transferred to the child. 
+                    </p>
+                    <p>
+                      Furthermore, to avoid early convergence we'll randomly mutate an individual in the population.
+                    </p>
+                    <p>
+                      Having all those elements, we can build a Genetic Algorithm. For each generation, we'll point out the fittest one and see how the algorithm works.
+                      We can see in the image on the top left of the page how the algorithm works, especially when it finds a new fittest individual.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© Alexandre Manai 2023</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--> <script type="text/javascript" src="./main.js"></script></body>
+
+</html>
